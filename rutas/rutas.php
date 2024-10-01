@@ -7,18 +7,15 @@ if (count(array_filter($array)) == 1) {
         "detalle" => "Sin Solicitudes",
     );
     echo json_encode($json, true);
-
 } else {
-
-
     if (Count(array_filter($array)) == 2) {
-        $json = array(
-            "detalle" => "con Solicitudes",
-        );
+        /*cursos*/
+        if (array_filter($array)[2] == "cursos") {
+            /*ver listas de cursos* */
+            if (isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] == "GET") {
+                $cursos = new ControladorCursos();
+                $cursos->index();
+            }
+        }
     }
-    echo json_encode($json, true);
-
-    
 }
-
-

@@ -8,6 +8,7 @@ if (count(array_filter($array)) == 1) {
     );
     echo json_encode($json, true);
 } else {
+    // peticion api
     if (Count(array_filter($array)) == 2) {
         /*cursos*/
         if (array_filter($array)[2] == "cursos") {

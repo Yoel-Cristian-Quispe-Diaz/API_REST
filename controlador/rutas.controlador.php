@@ -1,5 +1,5 @@
 <?php
-class controladorRutas
+class ControladorRutas
 {
     
     public function inicio()
